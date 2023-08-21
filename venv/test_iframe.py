@@ -13,7 +13,8 @@ browser.maximize_window()
 browser.get("https://chercher.tech/practice/frames")
 
 
-iframe1 = browser.find_element(By.ID, "iframe1")
+iframe1 = browser.find_element(By.ID, "frame1")
 browser.switch_to.frame(iframe1)
-browser.find_element(By.XPATH, "//*[@id='topic']/following-sibling::input").send_keys("iframe1")
+
+browser.find_element(By.XPATH, "/html/body/input").send_keys("iframe1")
 time.sleep(2)
